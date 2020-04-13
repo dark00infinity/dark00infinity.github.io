@@ -1,0 +1,134 @@
+﻿<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Covid-19 places</title>
+  <link rel="icon" type="image/x-icon" href="logo1.png"/>
+  <style>
+    html, body, #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+  
+  <link rel="stylesheet" href="https://js.arcgis.com/4.15/esri/themes/light/main.css">
+  <script src="https://js.arcgis.com/4.15/"></script>
+  
+  <script>  
+    require([
+      "esri/Map",
+      "esri/WebMap",
+      "esri/views/MapView",
+      "esri/tasks/Locator",
+      "esri/widgets/Locate",
+      "esri/widgets/Track",
+      "esri/Graphic"
+    ], function(Map, WebMap, MapView, Locator, Locate, Track, Graphic) {
+
+      var webmap = new WebMap({
+        portalItem: {
+          id: "f76a8d1ee18847c0a9c59c0c0b6c78c2"
+        }
+      });
+      
+      var view = new MapView({
+        container: "viewDiv",
+        map: webmap,
+        center: [76.779419, 30.733315],
+        zoom: 13
+      });
+      
+      var places = ["pharmacy", "School", "Gas station", "Food", "ATM", "Hospital"];
+      
+      var select = document.createElement("select","");
+       select.setAttribute("class", "esri-widget esri-select");
+       select.setAttribute("style", "width: 175px; font-family: Avenir Next W00; font-size: 1em");
+      places.forEach(function(p){
+        var option = document.createElement("option");
+        option.value = p;
+        option.innerHTML = p;
+        select.appendChild(option);
+      });
+      
+      view.ui.add(select, "top-right");
+      
+      var locator = new Locator({
+         url: "http://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer"
+      });
+  
+      // Find places and add them to the map
+      function findPlaces(category, pt) {
+        locator.addressToLocations({
+          location: pt,
+          categories: [category],
+          maxLocations: 25,
+          outFields: ["Place_addr", "PlaceName"]
+        })
+        .then(function(results) {
+          view.popup.close();
+          view.graphics.removeAll();
+          results.forEach(function(result){
+            view.graphics.add(
+              new Graphic({
+                attributes: result.attributes,
+                geometry: result.location,
+                symbol: {
+                 type: "simple-marker",
+                 color: "#000000",
+                 size: "12px",
+                 outline: {
+                   color: "#ffffff",
+                   width: "2px"
+                 }
+                },
+                popupTemplate: {
+                  title: "{PlaceName}",
+                  content: "{Place_addr}"
+                }
+             }));
+          });
+        });
+      }
+      
+      // Search for places in center of map
+      findPlaces(select.value, view.center);
+
+      // Listen for category changes and find places
+      select.addEventListener('change', function (event) {
+        findPlaces(event.target.value, view.center);
+      });
+  
+      // Listen for mouse clicks and find places
+      view.on("click", function(event){
+        view.hitTest(event.screenPoint)
+          .then(function(response){
+            if (response.results.length < 2) { // If graphic is not clicked, find places 
+findPlaces(select.options[select.selectedIndex].text, event.mapPoint);
+            }
+        })
+      });
+      var track = new Track({
+          view: view,
+          graphic: new Graphic({
+            symbol: {
+              type: "simple-marker",
+              size: "12px",
+              color: "green",
+              outline: {
+                color: "#efefef",
+                width: "1.5px"
+              }
+            }
+          }),
+        
+        });
+        view.ui.add(track, "top-left");
+    });
+  </script>
+</head>
+<body>
+  <div id="viewDiv"></div>
+</body>
+</html>

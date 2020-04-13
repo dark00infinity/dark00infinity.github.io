@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    
+    <title>i can help </title>
+    <link rel="icon" type="image/x-icon" href="logo1.png"/>
+    <!-- This page CSS -->
+    <!-- chartist CSS -->
+    <link href="../assets/node_modules/morrisjs/morris.css" rel="stylesheet">
+    <link href="dist/css/pages/ribbon-page.css" rel="stylesheet">
+    <!--Toaster Popup message CSS -->
+    <link href="../assets/node_modules/toast-master/css/jquery.toast.css" rel="stylesheet">
+    <!-- Morris CSS -->
+    <link href="../assets/node_modules/morrisjs/morris.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="dist/css/style.min.css" rel="stylesheet">
+    <!-- Dashboard 1 Page CSS -->
+    <link href="dist/css/pages/dashboard1.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="skin-blue fixed-layout mini-sidebar" select="none">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+   <!--  <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label"> HelpDesk</p>
+        </div>
+    </div> -->
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar" style="box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.05);">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header" style="background:#fff">
+                    <a class="navbar-brand" href="index.html"><b><img src="logo1.png" width="40" height="40" alt="homepage" class="light-logo"> </b>
+                    <span class="hidden-xs" style=""><span class="font-bold" style="color:#444"></span>        
+                    </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav mr-auto">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link nav-toggler d-block d-md-none waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                        <li class="nav-item"> <a class="nav-link sidebartoggler d-none d-lg-block d-md-block waves-effect waves-dark" href="javascript:void(0)"><i class="icon-menu"></i></a> </li>
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item" style="display: flex; align-items: center;">
+                            <!--form class="app-search d-none d-md-block d-lg-block">
+                                <input type="text" class="form-control" placeholder="Search &amp; enter">
+                            </form-->
+							<h4 style="color:#fff; margin:0;">"ALONE WE CAN DO SO LITTLE, TOGETHER WE CAN DO SO MUCH"--HELEN KELLER</h4>
+                        </li>
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav my-lg-0">
+                        <!-- ============================================================== -->
+                        <!-- Comment -->
+                        <!-- ============================================================== -->
+                        
+                        <!-- ============================================================== -->
+                        <!-- End Comment -->
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                        <!-- User Profile -->
+                        <!-- ============================================================== -->
+                       <!-- <li class="nav-item dropdown u-pro">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="Login/index.php">
+                       
+                                      <img src="../assets/images/users/3.jpg" alt="user" class="">
+                              
+                                <span class="hidden-md-down">Login/ Register &nbsp;</span>
+                                </a>
+                        </li>-->
+                         <li class="nav-item dropdown u-pro">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="gethelp.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              
+                    <img src="user-logo.png" alt="user" class="">
+                              
+                             
+                                 <span class="hidden-md-down">Get help  &nbsp;<i class="fa fa-angle-down"></i></span> </a>
+                            <div class="dropdown-menu dropdown-menu-right animated flipInY">
+                                 <a href="Login/index.html" class="dropdown-item"><i class="fas fa-arrow-alt-circle-right"></i> Login</a>
+                                <!-- text-->
+
+                            </div>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- End User Profile -->
+                        <!-- ============================================================== -->
+                        <!--li class="nav-item right-side-toggle"> <a class="nav-link  waves-effect waves-light" href="javascript:void(0)"><i class="ti-settings"></i></a></li-->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper" style="margin: 50px;">
+
+				            <div class="card text-center"><div class="card-body">
+                                <h4 class="card-title">i can help, Registration </h4>
+                                <div id="display5"></div>
+                            </div>  
+                        </div>
+               <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-header bg-info">
+                                <h4 class="mb-0 text-white">Registration</h4>
+                                 
+                            </div>
+                            
+                            <form class="gform" action="https://script.google.com/macros/s/AKfycby3o79VzfZn4rRZ1sz02yy4o52gaTptFej8kV4l9mbebOV9cgot/exec" method="POST">
+                                
+                                <div class="form-body">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-12 ">
+                                                <div class="form-group">
+                                                    <fieldset>
+                                                    <label for="Name">Name</label>
+                                                    <input placeholder="Enter Full Name" type="text" name="Name" class="form-control" required/>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                             <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <fieldset>
+                                                    <label for="Gender">Gender</label>
+                                                    <select name="Gender" class="form-control custom-select" required>
+                                                        <option>---Select--</option>
+                                                        <option value="Male">Male</option>
+                                                        <option value="Female">Female</option>
+                                                        <option value="Trans-gender">Trans-gender</option>
+                                                    </select>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                             <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <fieldset>
+                                                    <label for="Profession">Profession</label>
+                                                    <input placeholder="Enter Profession" type="text"name="Profession" class="form-control custom-select" required>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                             <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <fieldset>
+                                                    <label for="Mode of help">Mode of help</label>
+                                                    <select name="Mode of help" class="form-control custom-select" required>
+                                                        <option selected value="" disabled="">--Select help--</option>
+                                                        <option value="Blood donation">Blood donation</option>
+                                                         <option value="Money" >Money</option>
+                                                          <option  value="Food" >Food</option>
+                                                           <option value="Job" >Job</option>
+
+                                                    </select>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <fieldset>
+                                                    <label for="Email">Email</label>
+                                                    <input type="email" placeholder="Enter Valid Email" name="Email" class="form-control" required/>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <fieldset>
+                                                    <label for="Phone">Phone</label>
+                                                    <input type="text" name="Phone" placeholder="Enter Phone Number" class="form-control" required/>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <fieldset>
+                                                    <label for="Address">Address</label>
+                                                    <input type="text" name="Address" placeholder="Enter Full Address" class="form-control" required/>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                            <!--/span-->
+                                        </div>
+                                        <!--/row-->
+                                    </div>
+                                    <div class="form-actions">
+                                        <div class="card-body">
+                                            
+                                            
+                                            <button type="submit" value="Open Window" class="btn btn-success" onclick="openWin()">Register</button>
+                                        
+                                            <button type="button" class="btn btn-dark">Cancel</button>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+  
+
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+           
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script>
+function openWin() {
+  window.open("page1.html");
+}
+</script>
+    <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
+    <script src="../assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap popper Core JavaScript -->
+    <script src="../assets/node_modules/popper/popper.min.js"></script>
+    <script src="../assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="dist/js/perfect-scrollbar.jquery.min.js"></script>
+    <!--Wave Effects -->
+    <script src="dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="dist/js/custom.min.js"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <!-- ============================================================== -->
+    <!--morris JavaScript -->
+    <script src="../assets/node_modules/raphael/raphael-min.js"></script>
+    <script src="../assets/node_modules/morrisjs/morris.min.js"></script>
+    <script src="../assets/node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <!-- Popup message jquery -->
+    <script src="../assets/node_modules/toast-master/js/jquery.toast.js"></script>
+    <!-- Chart JS -->
+    <script src="dist/js/dashboard1.js"></script>
+    <script>
+                $(function() {
+            $("#myForm").submit(function(e) {
+                $('#but').html('Processing...');
+                e.preventDefault();
+                $.ajax({
+                    url: 'internshallaapi.php',
+                    type: 'POST',
+                    data: $(this).serialize(),
+                    success: function(result) {
+                        //alert(result);
+                        $('html, body').animate({ scrollTop: 0 }, 'slow', function () {});
+					    $('#display5').html('<div class="alert alert-success alert-dismissible fade show" role="alert"><strong></strong>' + result+ '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+                        setTimeout("window.location.href='Login/index.php';",4000);
+                        // return false;
+                    }
+                });
+                // return false;
+            });
+        })
+    </script>
+    <script>document.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+    }, false);</script>
+</body>
+</html>

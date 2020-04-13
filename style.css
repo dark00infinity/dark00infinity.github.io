@@ -1,0 +1,368 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+@import url("https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap");
+
+:root {
+  --confirmed: #3a7660;
+  --recovered: #1999c1;
+  --deaths: #bf3912;
+  --primary: #7a58cb;
+  --confirmed-dark: #215d47;
+  --recovered-dark: #0080a8;
+  --deaths-dark: #a62000;
+  --primary-dark: #613fb2;
+  --primary-light: #dad2bc;
+  --secondary: #a99985;
+  --secondary-dark: #BFB18B ;
+  --black: #000;
+  --white: #ddd;
+  --water: rgba(0, 0, 0, 0.8);
+  --shadow: rgba(0, 0, 0, 0.25);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  transition: all 0.5s ease;
+}
+
+*::selection,
+*::-moz-selection {
+  color: var(--white);
+  background: var(--black);
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Nunito", serif;
+  color: var(--black);
+  background: var(--secondary);
+  min-height: 100vh;
+  margin-top: 9.5rem;
+}
+
+header,
+main {
+  display: grid;
+  grid-gap: 1rem;
+  padding: 1rem;
+}
+
+header {
+  grid-template-columns: 1fr;
+}
+
+main {
+  grid-gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.buttons {
+  display: grid;
+  grid-gap: 0.25rem;
+  grid-template-columns: repeat(2, 1fr);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: var(--secondary-dark);
+  z-index: 2;
+  box-shadow: 0 0 .4rem .2rem var(--shadow);
+}
+
+.total {
+  font-size: 1.75rem;
+  text-transform: capitalize;
+}
+
+.country {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  background: var(--primary-light);
+  box-shadow: 0 0 .4rem .2rem var(--shadow);
+}
+
+.country span:last-of-type {
+  font-weight: bold;
+}
+
+.country__name {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin: 0 0 0.25rem;
+  max-width: 80%;
+}
+
+.total {
+  font-weight: bold;
+}
+
+.total .cases,
+.country__confirmed {
+  color: var(--confirmed);
+}
+
+.total .recovered,
+.country__recovered {
+  color: var(--recovered-dark);
+}
+
+.total .deaths,
+.country__deaths {
+  color: var(--deaths);
+}
+
+.country__deaths,
+.country__recovered,
+.country__confirmed,
+.country__date {
+  margin: 0.5rem 0 0;
+}
+
+.country__deaths span:last-of-type,
+.country__recovered span:last-of-type,
+.country__confirmed span:last-of-type {
+  font-size: 1.25rem;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  color: var(--white);
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0.25rem;
+}
+
+button.confirmed {
+  background: var(--confirmed);
+}
+
+button.deaths {
+  background: var(--deaths);
+}
+
+button.recovered {
+  background: var(--recovered);
+}
+
+button.name {
+  background: var(--primary);
+}
+
+button.confirmed:hover,
+button.confirmed:focus {
+  background: var(--confirmed-dark);
+}
+
+button.deaths:hover,
+button.deaths:focus {
+  background: var(--deaths-dark);
+}
+
+button.recovered:hover,
+button.recovered:focus {
+  background: var(--recovered-dark);
+}
+
+button.name:hover,
+button.name:focus {
+  background: var(--primary-dark);
+}
+
+.emojis {
+  margin: 1rem 0 0;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+}
+
+.emojis > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.emojis a {
+  display: flex;
+  justify-content: center;
+  align-self: stretch;
+  margin: 0 0 0.5rem;
+}
+
+.emojis img:hover,
+.emojis img:focus {
+  transform: scale(1.25);
+  /* box-shadow: 0 0 2rem 1rem var(--shadow); */
+}
+
+.emojis img {
+  width: 100%;
+  height: 100%;
+  max-height: 2rem;
+  max-width: 2rem;
+  border-radius: 50%;
+  box-shadow: 0 0 .4rem .2rem var(--shadow);
+}
+
+.emojis p {
+  margin: 0;
+  padding: 0;
+  word-break: break-all;
+  font-size: .85rem;
+}
+
+.dove {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+@media screen and (min-width: 30rem) {
+  .emojis {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+  }
+}
+@media screen and (min-width: 40rem) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  body {
+    margin-top: 10.5rem;
+  }
+  .buttons {
+    grid-gap: 1rem;
+  }
+  .emojis {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+  }
+}
+@media screen and (min-width: 60rem) {
+  header,
+  main {
+    grid-gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .buttons {
+    grid-gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .emojis {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+  }
+
+  body {
+    margin-top: 6rem;
+  }
+}
+@media screen and (min-width: 70rem) {
+  .emojis {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 6rem;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  color: #333;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 1rem;
+  border: 1px solid #888;
+  width: 80%;
+  position: relative;
+}
+
+.modal-body h1 {
+  margin: 0 0 1rem;
+  padding: 0;
+  font-size: 1.25rem;
+}
+
+.modal-body p:first-child {
+  margin-top: 0;
+}
+
+.modal-body p:last-child {
+  margin-bottom: 0;
+}
+
+.modal-body > div {
+  height: 100%;
+  min-height: 8rem;
+  max-height: 8rem;
+  overflow: auto;
+  margin: 4.5rem 0 0;
+}
+
+.modal-body button {
+  position: absolute;
+  top: 1rem;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: .2rem;
+  right: .5rem;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.modal-content .close:hover,
+.modal-content .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 60rem) {
+  .modal-body > div {
+    max-height: 100%;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 70rem) {
+  .modal {
+    top: 0;
+  }
+}

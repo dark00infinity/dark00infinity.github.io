@@ -7,10 +7,10 @@ _ JAVASCRIPT
 _ PYTHON
 _ THIRD PARTY WIDGETS AND API 
 ## How to run:
-_ 1. Dowload zip file
-_ 2. unzip it
-_ 3. That's it your website is ready to run
-_ 4. Open index.html file
+_1. Dowload zip file
+_2. unzip it
+_3. That's it your website is ready to run
+_4. Open index.html file
 
 
 

@@ -1,8 +1,8 @@
 ## Project_Demo :[dark00infinity.github.io](https://dark00infinity.github.io/)
 # Hackathon Project
 ## Technology stack:
-_ HTML
-_ CSS
+- HTML
+- CSS
 _ JAVASCRIPT
 _ PYTHON
 _ THIRD PARTY WIDGETS AND API 

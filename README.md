@@ -3,14 +3,14 @@
 ## Technology stack:
 - HTML
 - CSS
-_ JAVASCRIPT
-_ PYTHON
-_ THIRD PARTY WIDGETS AND API 
+- JAVASCRIPT
+- PYTHON
+- THIRD PARTY WIDGETS AND API 
 ## How to run:
-_1. Dowload zip file
-_2. unzip it
-_3. That's it your website is ready to run
-_4. Open index.html file
+- 1. Dowload zip file
+- 2. unzip it
+- 3. That's it your website is ready to run
+- 4. Open index.html file
 
 
 

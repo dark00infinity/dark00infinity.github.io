@@ -9,7 +9,7 @@
 ## How to run:
 - 1. Dowload zip file
 - 2. unzip it
-- 3. That's it your website is ready to run
+- 3. That's it our project is ready to run
 - 4. Open index.html file
 
 
